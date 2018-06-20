@@ -13,13 +13,17 @@ contact::~contact()
 {
 }
 
-contact::contact(string name, string firstName, int age, int phoneNb) {
+contact::contact(int id, string name, string firstName, int age, int phoneNb) {
+	this->id = id;
 	this->name = name;
 	this->firstName = firstName;
 	this->age = age;
 	this->phoneNb = phoneNb;
 }
 
+int contact::getId() {
+	return id;
+}
 string contact::getName() {
 	return name;
 }
@@ -34,6 +38,10 @@ int contact::getAge() {
 
 int contact::getPhoneNb() {
 	return phoneNb;
+}
+
+void contact::setId(int id) {
+	this->id = id;
 }
 
 void contact::setName(string name) {
@@ -54,6 +62,6 @@ void contact::setPhoneNb(int phoneNb) {
 
 string contact::makeCSV() {
 	stringstream sstm;
-	sstm << name << "," << firstName << "," << age << "," << phoneNb;
+	sstm << id << "," << name << "," << firstName << "," << age << "," << phoneNb;
 	return sstm.str();
 }

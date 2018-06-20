@@ -9,11 +9,13 @@ class contact
 public:
 	contact();
 	~contact();
-	contact(string name, string firstName, int age, int phoneNb);
+	contact(int id, string name, string firstName, int age, int phoneNb);
+	int getId();
 	string getName();
 	string getFirstName();
 	int getAge();
 	int getPhoneNb();
+	void setId(int id);
 	void setName(string name);
 	void setFirstName(string firstName);
 	void setAge(int age);
@@ -21,6 +23,7 @@ public:
 	string makeCSV();
 
 private:
+	int id;
 	string name;
 	string firstName;
 	int age;
