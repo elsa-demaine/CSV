@@ -9,17 +9,17 @@ class contact
 public:
 	contact();
 	~contact();
-	contact(int id, string name, string firstName, int age, int phoneNb);
+	contact(int id, string name, string firstName, int age, string phoneNb);
 	int getId();
 	string getName();
 	string getFirstName();
 	int getAge();
-	int getPhoneNb();
+	string getPhoneNb();
 	void setId(int id);
 	void setName(string name);
 	void setFirstName(string firstName);
 	void setAge(int age);
-	void setPhoneNb(int phoneNb);
+	void setPhoneNb(string phoneNb);
 	string makeCSV();
 
 private:
@@ -27,6 +27,6 @@ private:
 	string name;
 	string firstName;
 	int age;
-	int phoneNb;
+	string phoneNb;
 };
 

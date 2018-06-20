@@ -13,7 +13,7 @@ contact::~contact()
 {
 }
 
-contact::contact(int id, string name, string firstName, int age, int phoneNb) {
+contact::contact(int id, string name, string firstName, int age, string phoneNb) {
 	this->id = id;
 	this->name = name;
 	this->firstName = firstName;
@@ -36,7 +36,7 @@ int contact::getAge() {
 	return age;
 }
 
-int contact::getPhoneNb() {
+string contact::getPhoneNb() {
 	return phoneNb;
 }
 
@@ -56,7 +56,7 @@ void contact::setAge(int age) {
 	this->age = age;
 }
 
-void contact::setPhoneNb(int phoneNb) {
+void contact::setPhoneNb(string phoneNb) {
 	this->phoneNb = phoneNb;
 }
 
